@@ -20,6 +20,10 @@ app.config['SENDGRID_API_KEY'] = sendgrid_api_key
 mongo = PyMongo(app)
 sg = sendgrid.SendGridAPIClient(app.config['SENDGRID_API_KEY'])
 
+
+port = int(os.environ.get("PORT", 5000))  # Render will provide PORT
+app.run(host='0.0.0.0', port=port, debug=True)
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -238,6 +242,7 @@ def email_webhook():
         {'messages.message_id': message_id},
         {'$push': {'messages.$.replies': {'from': sender, 'reply_text': text}}}
     )
+    
 
     return 'OK', 200
 
