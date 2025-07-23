@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2><span class="code-tag">&lt;NexByte/&gt;</span> Transforming Ideas into <span class="code-tag">&lt;Code/&gt;</span></h2>
+    <p class="tagline">We specialize in <span class="highlight">high-performance websites</span>, <span class="highlight">intuitive mobile apps</span>, and <span class="highlight">robust software</span> for digital growth.<span class="cursor-blink">|</span></p>
+    <a href="{{ url_for('services') }}" class="btn">Our Services</a>
+</section>
+{% endblock %}

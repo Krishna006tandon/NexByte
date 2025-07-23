@@ -1,0 +1,301 @@
+/* CSS Variables for Colors and Fonts */
+:root {
+    --forest-green: #2F4F2F;
+    --coffee-brown: #8B4513;
+    --off-white: #F5F5DC;
+    --gold-accent: #D4AF37;
+    --dark-text: #333333;
+    --light-text: #FFFFFF;
+
+    --font-heading: 'Lora', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+/* General Body Styles */
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+    color: var(--dark-text);
+    line-height: 1.7;
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--forest-green);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--forest-green);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--gold-accent);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://placehold.co/1600x800/2F4F2F/FFFFFF?text=Lush+Coffee+Farm');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    text-align: center;
+    padding: 10rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.mission-statement {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--gold-accent);
+    color: var(--dark-text);
+}
+
+.btn-primary:hover {
+    background-color: #c8a02b;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--forest-green);
+    color: var(--light-text);
+}
+
+.btn-secondary:hover {
+    background-color: #253f25;
+}
+
+/* Common Section Styles */
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--forest-green);
+    margin-bottom: 2rem;
+}
+
+/* Sustainability Section */
+.sustainability-features {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.feature {
+    max-width: 300px;
+}
+
+.feature h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--coffee-brown);
+}
+
+/* Product Section */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--coffee-brown);
+    margin: 1rem 0;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: 1.5rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #E8E4D5;
+}
+
+.testimonial-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    max-width: 450px;
+}
+
+.testimonial blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    border-left: 4px solid var(--gold-accent);
+    padding-left: 1.5rem;
+    margin: 0 0 1rem 0;
+    text-align: left;
+}
+
+.testimonial cite {
+    font-weight: 700;
+    color: var(--coffee-brown);
+}
+
+/* Newsletter Section */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.newsletter-form input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--forest-green);
+    color: var(--off-white);
+    text-align: center;
+    padding: 2rem 0;
+}
+/* Auth & Profile Section Styles */
+.auth-section, .profile-section {
+    padding: 5rem 2rem;
+}
+
+.auth-container, .profile-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.auth-container h2, .profile-container h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.profile-details p {
+    font-size: 1.1rem;
+}
+
+.order-history {
+    margin-top: 2rem;
+}

@@ -1,0 +1,87 @@
+{% extends "coffee_layout.html" %}
+
+{% block title %}Home - Verdant Roast{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Sip Sustainably. Taste the Difference.</h1>
+        <p class="mission-statement">At Verdant Roast, we believe exceptional coffee shouldn't cost the earth. We bring you single-origin beans, ethically sourced from regenerative farms, roasted to perfection.</p>
+        <a href="#shop" class="btn btn-primary">Shop Our Coffee</a>
+    </div>
+</section>
+
+<!-- Sustainability Section -->
+<section id="sustainability" class="sustainability-section">
+    <h2>From Seed to Cup, with Care.</h2>
+    <p>We partner directly with farmers who use sustainable practices to cultivate rich, flavorful coffee while preserving the lush ecosystems they call home. Our commitment is to transparency, fairness, and a healthier planet.</p>
+    <div class="sustainability-features">
+        <div class="feature">
+            <img src="https://placehold.co/100x100/2F4F2F/FFFFFF?text=Ethical" alt="Ethical Sourcing Icon">
+            <h3>Ethically Sourced</h3>
+            <p>Direct trade ensures fair wages for our farming partners.</p>
+        </div>
+        <div class="feature">
+            <img src="https://placehold.co/100x100/2F4F2F/FFFFFF?text=Green" alt="Sustainable Farming Icon">
+            <h3>Sustainable Farming</h3>
+            <p>Supporting biodiversity and regenerative agriculture.</p>
+        </div>
+        <div class="feature">
+            <img src="https://placehold.co/100x100/2F4F2F/FFFFFF?text=Eco" alt="Eco-Friendly Packaging Icon">
+            <h3>Eco-Friendly Packaging</h3>
+            <p>Our bags are 100% compostable to reduce waste.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Product Grid Section -->
+<section id="shop" class="product-section">
+    <h2>Our Top-Selling Coffees</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://placehold.co/400x400/8B4513/FFFFFF?text=Lush+Beans" alt="Morning Mist Blend Coffee Bag">
+            <h3>Morning Mist Blend</h3>
+            <p class="price">$18.00</p>
+            <button class="btn btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/400x400/8B4513/FFFFFF?text=Rich+Roast" alt="Jungle Canopy Dark Roast Coffee Bag">
+            <h3>Jungle Canopy Dark Roast</h3>
+            <p class="price">$19.50</p>
+            <button class="btn btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/400x400/8B4513/FFFFFF?text=Single+Origin" alt="Golden Hour Single Origin Coffee Bag">
+            <h3>Golden Hour Single Origin</h3>
+            <p class="price">$22.00</p>
+            <button class="btn btn-secondary">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <h2>What Our Customers Are Saying</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            <blockquote>"The best coffee I've ever had, and I feel good about buying it. You can taste the quality and care in every cup."</blockquote>
+            <cite>- Alex R.</cite>
+        </div>
+        <div class="testimonial">
+            <blockquote>"Verdant Roast has become my go-to. Their commitment to sustainability is inspiring, and the coffee is simply divine."</blockquote>
+            <cite>- Jordan T.</cite>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Signup Section -->
+<section id="contact" class="newsletter-section">
+    <h2>Join Our Journey</h2>
+    <p>Be the first to know about new roasts, special offers, and stories from our farms.</p>
+    <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+</section>
+{% endblock %}

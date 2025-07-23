@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+<section class="admin-section">
+    <div class="admin-container">
+        <h2>Admin Panel</h2>
+        <h3>All Users</h3>
+        <div class="user-messages">
+            {% for user in users %}
+                {% if user.messages %}
+                    <h4>Messages from {{ user.name }} ({{ user.email }})</h4>
+                    <ul class="message-list">
+                        {% for message in user.messages %}
+                            <li class="message-item">
+                                <p><strong>Message:</strong> {{ message.message }}</p>
+                                <div class="replies">
+                                    <h5>Replies:</h5>
+                                    <ul>
+                                        {% for reply in message.replies %}
+                                            <li>
+                                                <p><strong>From:</strong> {{ reply.from }}</p>
+                                                <p>{{ reply.reply_text }}</p>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <form action="{{ url_for('admin_reply', user_id=user._id, message_id=message.message_id) }}" method="POST" class="reply-form">
+                                    <textarea name="reply" placeholder="Write your reply..." required></textarea>
+                                    <button type="submit" class="btn">Send Reply</button>
+                                </form>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+    </div>
+</section>
+{% endblock %}

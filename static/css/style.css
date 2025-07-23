@@ -1,0 +1,433 @@
+/* === Technical Dark Theme === */
+body {
+    font-family: 'Fira Mono', 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #191970 0%, #000 100%);
+    color: #e0e8ef;
+    min-height: 100vh;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #10142a;
+    padding: 1.2rem 2.5vw;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    border-bottom: 2px solid #00ffe7;
+}
+.logo {
+    font-size: 2rem;
+    color: #00ffe7;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Fira Mono', monospace;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5vw;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li a {
+    color: #e0e8ef;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.nav-links li a:hover, .nav-links li a:focus {
+    background: #00ffe7;
+    color: #10142a;
+    box-shadow: 0 2px 8px #00ffe7aa;
+}
+
+/* Main Content */
+main {
+    padding: 48px 4vw 32px 4vw;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card/Section Styles */
+.hero, .about, .contact, .service {
+    background: rgba(25, 25, 112, 0.85);
+    border: 1.5px solid #22263a;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px #000a 0.1;
+    margin-bottom: 32px;
+    padding: 40px 32px;
+    color: #e0e8ef;
+    text-align: left;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.hero {
+    text-align: center;
+    background: linear-gradient(120deg, #191970 60%, #10142a 100%);
+    border: 2px solid #00ffe7;
+    box-shadow: 0 6px 32px #00ffe755;
+}
+.hero h2 {
+    font-size: 2.7rem;
+    color: #00ffe7;
+    margin-bottom: 0.7em;
+}
+.hero p {
+    font-size: 1.25rem;
+    color: #b0c4de;
+}
+
+.about, .contact {
+    background: rgba(16, 20, 42, 0.95);
+    border-left: 4px solid #00ffe7;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+.service {
+    background: rgba(25, 25, 112, 0.92);
+    border: 1.5px solid #00ffe7;
+    box-shadow: 0 2px 16px #00ffe733;
+    max-width: 340px;
+    flex: 1 1 300px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.service:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px #00ffe7aa;
+}
+.service h2 {
+    color: #00ffe7;
+    font-size: 1.4rem;
+}
+
+h2, h3, h4 {
+    color: #00ffe7;
+    font-family: 'Fira Mono', monospace;
+}
+
+/* Buttons */
+.btn, button, input[type="submit"] {
+    background: #00ffe7;
+    color: #10142a;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #00ffe755;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+.btn:hover, button:hover, input[type="submit"]:hover {
+    background: #10142a;
+    color: #00ffe7;
+    box-shadow: 0 4px 16px #00ffe7cc;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 500px;
+    margin: 24px auto;
+    background: rgba(16, 20, 42, 0.95);
+    border-radius: 10px;
+    padding: 32px 24px;
+    border-left: 4px solid #00ffe7;
+}
+form label {
+    font-weight: 600;
+    color: #00ffe7;
+}
+form input, form textarea {
+    padding: 10px;
+    border: 1.5px solid #22263a;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #181c2f;
+    color: #e0e8ef;
+    font-family: 'Fira Mono', monospace;
+}
+form input:focus, form textarea:focus {
+    outline: 2px solid #00ffe7;
+    background: #10142a;
+}
+
+/* Footer */
+footer {
+    background: #10142a;
+    color: #b0c4de;
+    text-align: center;
+    padding: 32px 0 18px 0;
+    width: 100%;
+    border-top: 2px solid #00ffe7;
+    font-size: 1.1rem;
+    margin-top: 40px;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.footer-dev {
+    color: #00ffe7;
+    font-size: 1rem;
+    font-family: 'Fira Mono', monospace;
+}
+
+/* Code/Developer Elements */
+pre, code {
+    background: #181c2f;
+    color: #00ffe7;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: 'Fira Mono', monospace;
+    font-size: 1rem;
+    margin: 8px 0;
+    display: block;
+    overflow-x: auto;
+}
+
+/* --- Developer/Technical Elements --- */
+.code-tag {
+    background: #181c2f;
+    color: #00ffe7;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-family: 'Fira Mono', monospace;
+    font-size: 1em;
+    margin: 0 2px;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 4px #00ffe733;
+}
+.highlight {
+    color: #00ffe7;
+    font-weight: 700;
+    background: rgba(0,255,231,0.08);
+    border-radius: 3px;
+    padding: 0 4px;
+}
+.cursor-blink {
+    display: inline-block;
+    width: 1ch;
+    color: #00ffe7;
+    background: none;
+    animation: blink 1s steps(1) infinite;
+    font-weight: bold;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+.service-icon {
+    font-size: 1.3em;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.tagline {
+    margin-bottom: 1.5em;
+    font-size: 1.15em;
+    font-family: 'Fira Mono', monospace;
+    color: #b0c4de;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .services-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .hero, .about, .contact, .service {
+        padding: 24px 10px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 12px;
+    }
+}
+/* Auth & Profile Section Styles */
+.auth-section, .profile-section {
+    padding: 5rem 2rem;
+}
+
+.auth-container, .profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(16, 20, 42, 0.95);
+    padding: 2.5rem;
+    border-radius: 14px;
+    border-left: 4px solid #00ffe7;
+    box-shadow: 0 8px 32px #00000088;
+    text-align: left;
+}
+
+.auth-container h2, .profile-container h2 {
+    text-align: center;
+    color: #00ffe7;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #00ffe7;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #22263a;
+    border-radius: 5px;
+    background: #181c2f;
+    color: #e0e8ef;
+    font-family: 'Fira Mono', monospace;
+    box-sizing: border-box;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #b0c4de;
+}
+.auth-switch a {
+    color: #00ffe7;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.profile-details p {
+    font-size: 1.1rem;
+    color: #e0e8ef;
+    border-bottom: 1px solid #22263a;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.order-history {
+    margin-top: 2rem;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.alert-success {
+    background-color: #00ffe7;
+    color: #10142a;
+    font-weight: 700;
+}
+
+.alert-error {
+    background-color: #ff4757;
+    color: #fff;
+}
+/* Message and Replies Styles */
+.message-list {
+    list-style: none;
+    padding: 0;
+}
+
+.message-item {
+    background: #10142a;
+    border: 1px solid #00ffe7;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.message-item p {
+    margin: 0 0 0.5rem 0;
+}
+
+.replies {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #22263a;
+}
+
+.replies h5 {
+    color: #00ffe7;
+    margin-bottom: 0.5rem;
+}
+
+.replies ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.replies li {
+    background: #181c2f;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid #00ffe7;
+}
+/* Admin Page Styles */
+.admin-section {
+    padding: 5rem 2rem;
+}
+
+.admin-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(16, 20, 42, 0.95);
+    padding: 2.5rem;
+    border-radius: 14px;
+    border-left: 4px solid #00ffe7;
+    box-shadow: 0 8px 32px #00000088;
+    text-align: left;
+}
+
+.admin-container h2 {
+    text-align: center;
+    color: #00ffe7;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.user-table th, .user-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #22263a;
+}
+
+.user-table th {
+    color: #00ffe7;
+}

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block content %}
+<section class="profile-section">
+    <div class="profile-container">
+        <h2>Welcome, {{ user.name }}!</h2>
+        <div class="profile-details">
+            <p><strong>Name:</strong> {{ user.name }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+        </div>
+        <hr>
+        <h3>Your Messages</h3>
+        {% if user.messages %}
+            <ul class="message-list">
+                {% for message in user.messages %}
+                    <li class="message-item">
+                        <p><strong>From:</strong> {{ message.name }} <{{ message.email }}></p>
+                        <p>{{ message.message }}</p>
+                        {% if message.replies %}
+                            <div class="replies">
+                                <h5>Replies:</h5>
+                                <ul>
+                                    {% for reply in message.replies %}
+                                        <li>
+                                            <p><strong>From: NexByte</strong></p>
+                                            <p>{{ reply.reply_text }}</p>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>You have no messages.</p>
+        {% endif %}
+       
+        <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+    </div>
+</section>
+{% endblock %}
